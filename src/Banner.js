@@ -2,7 +2,7 @@ import './Banner.css';
 
 import React from 'react'
 
-function Banner({bannerText}) {
+const Banner = ({bannerText}) => {
   return (
     <div className="Banner">
         <h1>{bannerText}</h1>
