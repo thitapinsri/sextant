@@ -1,14 +1,18 @@
 import './App.css';
 import Banner from './Banner';
 import Exhibit from './Exhibit';
+import AddressDisplay from './AddressDisplay';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Banner bannerText="Sextant" />
-      <Exhibit name="exhibit1" />
-      <Exhibit name="exhibit2" />
-      <Exhibit name="exhibit3" />
+        <Exhibit name="Public IPv4 Address">
+          <AddressDisplay url='https://api.ipify.org?format=json' />
+        </Exhibit>
+        <Exhibit name="Public IPv6 Address">
+            <AddressDisplay url='https://api64.ipify.org?format=json' />
+        </Exhibit>
     </div>
   );
 }
